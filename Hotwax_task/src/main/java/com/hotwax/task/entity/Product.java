@@ -1,0 +1,54 @@
+package com.hotwax.task.entity;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "Product")
+public class Product {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "product_id")
+    private Integer productId;
+
+    @Column(name = "product_name", nullable = false)
+    private String productName;
+
+    @Column(name = "color")
+    private String color;
+
+    @Column(name = "size")
+    private String size;
+
+    public Integer getProductId() {
+        return productId;
+    }
+
+    public void setProductId(Integer productId) {
+        this.productId = productId;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+}
